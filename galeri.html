@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rumah Sakit</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Tambahkan padding atas untuk konten agar tidak tertutup oleh navbar */
+        body {
+            padding-top: 100px; /* Sesuaikan sesuai tinggi navbar */
+            background-color: #e0f7fa; /* Warna latar belakang cerah */
+            font-family: Arial, sans-serif;
+        }
+        .navbar {
+            background-color: #80deea; /* Warna biru muda untuk navbar */
+            padding: 1rem;
+        }
+        .gallery {
+            margin-top: 30px;
+        }
+        .gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .info-block {
+            margin-top: 20px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+         /* Gaya untuk tombol back to top */
+         #backToTop {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+            padding: 10px;
+            border-radius: 50%;
+            background-color: #80deea;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        #backToTop:hover {
+            background-color: #4CAF50;
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">Beranda <span class="sr-only">(sekarang)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="profile.html">Profil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="layanankami.html">Layanan Kami</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="galeri.html">Galeri</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="hubungi.html">Hubungi Kami</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Logo Rumah Sakit --> 
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <img src="img/favicon.png" alt="Logo Rumah Sakit" class="logo img-fluid">
+            </div>
+        </div>
+    </div>
+
+    <!-- Galeri -->
+    <div class="container gallery">
+        <h2 class="text-center">Galeri Rumah Sakit Pekalongan</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <img src="img/gal.jpg" alt="Galeri 1" class="img-fluid">
+            </div>
+            <div class="col-md-4">
+                <img src="img/gal1.jpg" alt="Galeri 2" class="img-fluid">
+            </div>
+            <div class="col-md-4">
+                <img src="img/gal2.jpg" alt="Galeri 3" class="img-fluid">
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-md-4">
+                <img src="img/gal3.jpg" alt="Galeri 4" class="img-fluid">
+            </div>
+            <div class="col-md-4">
+                <img src="img/gal4.jpg" alt="Galeri 5" class="img-fluid">
+            </div>
+            <div class="col-md-4">
+                <img src="img/gal5.jpg" alt="Galeri 6" class="img-fluid">
+            </div>
+        </div>
+
+    <!-- Carousel Video -->
+    <div class="container my-5">
+        <h2 class="text-center">Video Rumah Sakit Pekalongan</h2>
+        <div id="videoCarousel" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#videoCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#videoCarousel" data-slide-to="1"></li>
+                <li data-target="#videoCarousel" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <video width="100%" controls>
+                        <source src="vids/vids.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+
+    <!-- Informasi Rumah Sakit -->
+    <div class="container">
+        <h2 class="text-center mt-5">Tentang Rumah Sakit</h2>
+        <div class="row">
+            <div class="col-md-4 info-block">
+                <h5>Visi</h5>
+                <p>Menjadi rumah sakit terkemuka yang menyediakan layanan kesehatan berkualitas tinggi, berorientasi pada kepuasan pasien, dan berkontribusi positif bagi kesehatan masyarakat.</p>
+            </div>
+            <div class="col-md-4 info-block">
+                <h5>Misi</h5>
+                <p>Memberikan layanan kesehatan yang aman, profesional, dan berkualitas sesuai dengan standar medis terkini.</p>
+            </div>
+            <div class="col-md-4 info-block">
+                <h5>Nilai</h5>
+                <p>Komitmen, Profesionalisme, Kejujuran, dan Kepedulian.</p>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-md-4 info-block">
+                <h5>Layanan</h5>
+                <p>Rumah sakit kami menyediakan berbagai layanan kesehatan, termasuk rawat inap, rawat jalan, dan pemeriksaan kesehatan.</p>
+            </div>
+            <div class="col-md-4 info-block">
+                <h5>Fasilitas</h5>
+                <p>Rumah sakit kami dilengkapi dengan fasilitas yang modern dan lengkap, termasuk ruang operasi, ruang rawat inap, dan laboratorium.</p>
+            </div>
+            <div class="col-md-4 info-block">
+                <h5>Tim Medis</h5>
+                <p>Tim medis kami terdiri dari dokter dan perawat yang berpengalaman dan berkualitas.</p>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-md-4 info-block">
+                <h5>Alamat</h5>
+                <p>Jl. Barito No 5 Pekalongan </p>
+            </div>
+            <div class="col-md-4 info-block">
+                <h5>Kontak</h5>
+                <p>Email: <a href="mailto:rs_br@yahoo.co.id">rs_br@yahoo.co.id</a></p>
+            </div>
+            <div class="col-md-4 info-block">
+                <h5>Jam Operasional</h5>
+                <p>Senin - Jumat: 08.00 - 17 .00, Sabtu: 08.00 - 13.00, Minggu: Tutup</p>
+            </div>
+        </div>
+    </div>
+
+  <!-- Block 9: Contact Us -->
+  <div class="container my-5">
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <h2>Hubungi Kami</h2>
+            <p>Hubungi kami untuk informasi lebih lanjut atau jika Anda membutuhkan bantuan dari tim kami.</p>
+            <p>Kami senang dapat membantu Anda.</p>
+            <p>Email: <a href="mailto:rs_br@yahoo.co.id">rs_br@yahoo.co.id</a></p>
+            <p>Alamat: Jl. Barito No 5 Pekalongan</p>
+            <div class="social-media">
+                <h5>Info lebih lanjut</h5>
+                <a href="https://www.facebook.com/maditiya.yk.1" target="_blank" class="mr-3">
+                    <img src="https://img.icons8.com/ios-filled/50/000000/facebook-new.png" alt="Facebook" style="width: 30px; height: 30px;"/>
+                </a>
+                <a href="https://x.com/Aditiyaqq" target="_blank" class="mr-3">
+                    <img src="https://img.icons8.com/ios-filled/50/000000/twitter.png" alt="Twitter" style="width: 30px; height: 30px;"/>
+                </a>
+                <a href="https://www.instagram.com/pra.nantaaaa/" target="_blank" class="mr-3">
+                    <img src="https://img.icons8.com/ios-filled/50/000000/instagram-new.png" alt="Instagram" style="width: 30px; height: 30px;"/>
+                </a>
+                <a href="https://wa.me/qr/LSZ5Z7HR3HE2A1" target="_blank">
+                    <img src="https://img.icons8.com/ios-filled/50/000000/whatsapp.png" alt="WhatsApp" style="width: 30px; height: 30px;"/>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <p>&copy; Rumah Sakit Pekalongan</p>
+            </div>
+        </div>
+    </div>
+<!-- Back to Top Button -->
+<button id="backToTop" class="btn btn-secondary" style="display: none; position: fixed; bottom: 20px; right: 20px; z-index: 1000;">
+    <i class="bi bi-arrow-up"></i>
+  </button>
+      <script>
+        // Menampilkan tombol ketika scroll ke bawah
+        window.onscroll = function() {
+            const button = document.getElementById("backToTop");
+            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+                button.style.display = "block";
+            } else {
+                button.style.display = "none";
+            }
+        };
+    
+        // Fungsi untuk scroll ke atas
+        document.getElementById("backToTop").onclick = function() {
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        };
+    </script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rumah Sakit Pekalongan</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Tambahkan padding atas untuk konten agar tidak tertutup oleh navbar */
+        body {
+            padding-top: 100px; /* Sesuaikan sesuai tinggi navbar */
+            background-color: #e0f7fa; /* Warna latar belakang cerah */
+            font-family: Arial, sans-serif;
+        }
+
+        /* Gaya untuk navbar */
+        .navbar {
+            background-color: #80deea; /* Warna biru muda untuk navbar */
+            padding: 1rem;
+        }
+
+        /* Gaya untuk logo */
+        .logo {
+            width: 100px;
+            height: 100px;
+            margin: 20px auto;
+            border-radius: 50%;
+        }
+
+        /* Gaya untuk carousel */
+        .carousel {
+            margin-top: 20px;
+        }
+
+        /* Gaya untuk block */
+        .block {
+            margin-bottom: 20px;
+        }
+
+        /* Gaya untuk footer */
+        .footer {
+            background-color: #80deea;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        /* Gaya untuk tombol back to top */
+        #backToTop {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+            padding: 10px;
+            border-radius: 50%;
+            background-color: #80deea;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        #backToTop:hover {
+            background-color: #4CAF50;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">Beranda <span class="sr-only">(sekarang)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="profile.html">Profil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="layanankami.html">Layanan Kami</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="galeri.html">Galeri</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="hubungi.html">Hubungi Kami</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Logo Rumah Sakit -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <img src="img/favicon.png" alt="Logo Rumah Sakit" class="logo">
+            </div>
+        </div>
+    </div>
+
+    <!-- Carousel -->
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="img/slider.jpg" alt="Slide 1" class="d-block w-100">
+            </div>
+            <div class="carousel-item">
+                <img src="img/slider2.jpg" alt="Slide 2" class="d-block w-100">
+            </div>
+            <div class="carousel-item">
+                <img src="img/slider3.jpg" alt="Slide 3" class="d-block w-100">
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Sebelumnya</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Selanjutnya</span>
+        </a>
+    </div>
+
+    <!-- Block 1: Welcome Message -->
+    <div class="container block my-5">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h2>Selamat Datang di Rumah Sakit Pekalongan</h2>
+                <p>"Selamat datang di Rumah Sakit Pekalongan Kami berkomitmen untuk memberikan layanan kesehatan terbaik bagi Anda dan keluarga. Dalam suasana yang nyaman dan aman, tim profesional kami siap melayani dengan penuh perhatian dan dedikasi. Terima kasih atas kepercayaan Anda kepada kami sebagai mitra kesehatan. Semoga Anda selalu sehat dan sejahtera bersama kami!"</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Block 2: Our Mission -->
+    <div class="container block my-5">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h2>Misi Kami</h2>
+                <p>Memberikan layanan kesehatan yang aman, profesional, dan berkualitas sesuai dengan standar medis terkini.</p>
+                <p>Mengutamakan kenyamanan, keamanan, dan kepercayaan pasien melalui pelayanan yang ramah dan responsif.</p>
+                <p>Mengembangkan tim medis dan non-medis yang kompeten serta berintegritas tinggi.</p>
+                <p>Mendorong inovasi dan pemanfaatan teknologi dalam setiap aspek pelayanan.</p>
+                <p>Meningkatkan kepedulian dan kerja sama dengan masyarakat sekitar dalam program kesehatan preventif dan edukasi kesehatan.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Block 3: Our Vision -->
+    <div class="container block my-5">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h2>Visi Kami</h2>
+                <p>"Menjadi rumah sakit terkemuka yang menyediakan layanan kesehatan berkualitas tinggi, berorientasi pada kepuasan pasien, dan berkontribusi positif bagi kesehatan masyarakat."</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Block 4: Our Values -->
+    <div class="container block my-5">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h2>Nilai-Nilai Kami</h2>
+                <p>1. Kualitas dan Profesionalisme</p>
+                <p>Menyediakan layanan kesehatan berkualitas tinggi dengan standar profesionalisme yang konsisten dan terpercaya.</p>
+
+                <p>2. Komitmen terhadap Keselamatan dan Keamanan Pasien</p>
+                <p>Prioritas utama adalah menjaga keselamatan pasien melalui praktik medis yang aman dan sesuai standar.</p>
+
+                <p>3. Empati dan Kepedulian</p>
+                <p>Mengutamakan pelayanan yang hangat, empati, dan penuh kepedulian terhadap pasien dan keluarga.</p>
+
+                <p>4. Inovasi dan Pengembangan Berkelanjutan</p>
+                <p>Berusaha terus berinovasi dalam teknologi dan layanan untuk memberikan yang terbaik bagi pasien.</p>
+
+                <p>5. Transparansi dan Akuntabilitas</p>
+                <p>Menjalankan operasional rumah sakit dengan jujur, terbuka, dan bertanggung jawab terhadap pasien dan masyarakat.</p>
+
+                <p>6. Kerja Sama dan Keberagaman</p>
+                <p>Mengedepankan kerja sama antar-staf serta menghargai keragaman untuk menciptakan lingkungan yang inklusif.</p>
+                
+                <p>7. Pendidikan dan Edukasi</p>
+                <p>Mempromosikan edukasi kesehatan kepada pasien dan masyarakat untuk menciptakan lingkungan yang lebih sehat.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Block 5: Our Services -->
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h2>Layanan Kami</h2>
+                <p>Kami menawarkan berbagai layanan termasuk :</p>
+                <ul>
+                    <li>Kedokteran Umum</li>
+                    <li>Bedah</li>
+                    <li>Kebidanan dan Kandungan</li>
+                    <li>Pediatri</li>
+                    <li>Perawatan Darurat</li>
+                    <li>Rehabilitasi Medis</li>
+                    <li>Layanan Kessehatan Mental</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Block 6: Our Team -->
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h2>Dokter</h2>
+                <p>Temui Dokter Kami yang berpengalaman dan berdedikasi dalam bidang kesehatan.</p>
+                <div class="row">
+                    <div class="col-md-4">
+                        <img src="img/dookter3.webp" alt="Dokter 1" class="img-fluid">
+                        <h5>Dr. Siti Aisyah, Sp.B.</h5>
+                        <p>Bedah, Kebidanan dan Kandungan</p>
+                    </div>
+                    <div class="col-md-4">
+                        <img src="img/mission-img.jpg" alt="Dokter 2" class="img-fluid">
+                        <h5>Dr. Budi Santoso, Sp.A.</h5>
+                        <p>Pediatri</p>
+                    </div>
+                    <div class="col-md-4">
+                        <img src="img/dokter.webp" alt="Dokter 3" class="img-fluid">
+                        <h5>Dr. Rina Astuti, Sp.PD.</h5>
+                        <p>Perawat Darurat</p>
+                    </div>
+                    <div class="col-md-4">
+                        <img src="img/pf3.jpg" alt="Dokter 3" class="img-fluid">
+                        <h5>Dr. Andi Wijaya</h5>
+                        <p>Kedokteran Umum</p>
+                    </div>
+                    <div class="col-md-4">
+                        <img src="img/about-img.jpg" alt="Dokter 3" class="img-fluid">
+                        <h5>Dr. Abdul Rahman, Sp.B.</h5>
+                        <p>Kesehatan Mental</p>
+                    </div>
+                    <div class="col-md-4">
+                        <img src="img/dokter2.webp" alt="Dokter 3" class="img-fluid">
+                        <h5>Dr. Maya Lestari, Sp.A.</h5>
+                        <p>Rehabilitasi Medis</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Block 7: Testimonials -->
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h2>Komentar/Testimoni</h2>
+                <p>Apa yang Dikatakan Pasien Kami</p>
+                <div class="row">
+                    <div class="col-md-4">
+                        <img src="img/author3.jpg" alt="John Doe" class="img-fluid rounded-circle" style="width: 100px; height: 100px;">
+                        <p>"Pelayanan Sangat Memuaskan"</p>
+                            <p>Saya sangat puas dengan pelayanan di rumah sakit ini. Dokter dan perawat sangat ramah dan profesional, menjadikan proses perawatan terasa nyaman dan aman. Terima kasih banyak atas perhatian yang diberikan."</p>
+                        <p>- Ibu Asmani</p>
+                    </div>
+                    <div class="col-md-4">
+                        <img src="img/author2.jpg" alt="Jane Smith" class="img-fluid rounded-circle" style="width: 100px; height: 100px;">
+                        <p>"Fasilitas Lengkap dan Modern"</p>
+                            <p>Rumah sakit ini memiliki fasilitas yang sangat lengkap dan modern. Proses perawatan menjadi lebih mudah dengan dukungan teknologi terkini dan tim medis yang berpengalaman. Saya merasa beruntung mendapatkan perawatan di sini.</p>
+                        <p>- Bapak Mulyadi</p>
+                    </div>
+                    <div class="col-md-4">
+                        <img src="img/author1.jpg" alt="Bob Johnson" class="img-fluid rounded-circle" style="width: 100px; height: 100px;">
+                        <p>"Tim Medis yang Profesional dan Peduli"</p>
+                            <p>Terima kasih kepada seluruh tim medis yang sudah merawat saya dengan penuh perhatian. Dokter dan perawat di sini sangat profesional dan sabar, menjadikan proses penyembuhan lebih cepat dan nyaman."</p>
+                        <p>- Ibu Munawaroh</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Block 8: Gallery -->
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h2>Galeri Kami</h2>
+                <p>Inilah fasilitas dan layanan kami.</p>
+                <div class="row">
+                    <div class="col-md-4">
+                        <img src="img/gal8.jpg" alt="Galeri 1" class="img-fluid">
+                    </div>
+                    <div class="col-md-4">
+                        <img src="img/gal7.jpg" alt="Galeri 2" class="img-fluid">
+                    </div>
+                    <div class="col-md-4">
+                        <img src="img/gal6.jpg" alt="Galeri 3" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Block 9: Contact Us -->
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h2>Hubungi Kami</h2>
+                <p>.Hubungi kami untuk informasi lebih lanjut atau jika Anda membutuhkan bantuan dari tim kami.</p>
+                <p>Kami senang dapat membantu Anda.</p>
+                <p>Email: <a href="mailto:rs_br@yahoo.co.id">rs_br@yahoo.co.id</a></p>
+                <p>Alamat: Jl. Barito No 5 Pekalongan</p>
+                <div class="social-media">
+                    <h5>Info lebih lanjut</h5>
+                    <a href="https://www.facebook.com/maditiya.yk.1" target="_blank" class="mr-3">
+                        <img src="https://img.icons8.com/ios-filled/50/000000/facebook-new.png" alt="Facebook" style="width: 30px; height: 30px;"/>
+                    </a>
+                    <a href="https://x.com/Aditiyaqq" target="_blank" class="mr-3">
+                        <img src="https://img.icons8.com/ios-filled/50/000000/twitter.png" alt="Twitter" style="width: 30px; height: 30px;"/>
+                    </a>
+                    <a href="https://www.instagram.com/pra.nantaaaa/" target="_blank" class="mr-3">
+                        <img src="https://img.icons8.com/ios-filled/50/000000/instagram-new.png" alt="Instagram" style="width: 30px; height: 30px;"/>
+                    </a>
+                    <a href="https://wa.me/qr/LSZ5Z7HR3HE2A1" target="_blank">
+                        <img src="https://img.icons8.com/ios-filled/50/000000/whatsapp.png" alt="WhatsApp" style="width: 30px; height: 30px;"/>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Block 10: Footer -->
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <p>&copy; Rumah Sakit Pekalongan</p>
+            </div>
+        </div>
+    </div>
+    <!-- Back to Top Button -->
+<button id="backToTop" class="btn btn-secondary" style="display: none; position: fixed; bottom: 20px; right: 20px; z-index: 1000;">
+    <i class="bi bi-arrow-up"></i>
+  </button>
+      <script>
+        // Menampilkan tombol ketika scroll ke bawah
+        window.onscroll = function() {
+            const button = document.getElementById("backToTop");
+            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+                button.style.display = "block";
+            } else {
+                button.style.display = "none";
+            }
+        };
+    
+        // Fungsi untuk scroll ke atas
+        document.getElementById("backToTop").onclick = function() {
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        };
+    </script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    </body>
+  </html>

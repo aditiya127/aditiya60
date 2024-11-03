@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Rumah Sakit</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css"> 
+    <style>
+        .social-icons a {
+            margin: 0 10px;
+            font-size: 20px;
+            color: #000;
+        }
+        body {
+            padding-top: 100px; 
+            background-color: #e0f7fa; 
+        }
+        .navbar {
+            background-color: #80deea; 
+        }
+        #backToTop {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+            padding: 10px;
+            border-radius: 50%;
+            background-color: #80deea;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        #backToTop:hover {
+            background-color: #4CAF50;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">Beranda <span class="sr-only">(sekarang)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="profile.html">Profil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="layanankami.html">Layanan Kami</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="galeri.html">Galeri</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="hubungi.html">Hubungi Kami</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <img src="img/favicon.png" alt="Logo Rumah Sakit" class="logo">
+            </div>
+        </div>
+    </div>
+    <div class="container my-5">
+        <h2 class="text-center">Profile Kami</h2>
+        <p class="text-center">Ini adalah Profile kami menawarkan berbagai layanan kesehatan untuk memenuhi kebutuhan Anda.</p>
+
+        <div id="videoCarousel" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#videoCarousel" data-slide-to="0" class="active"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <video class="d-block w-100" controls>
+                        <source src="vids/klip6.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#videoCarousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Sebelumnya</span>
+            </a>
+            <a class="carousel-control-next" href="#videoCarousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Selanjutnya</span>
+            </a>
+        </div>
+        <section id="profile" class="py-5">
+            <div class="container">
+                <h2>Profile Rumah Sakit Pekalongan </h2>
+                <p>Rumah Sakit kami berdedikasi untuk memberikan pelayanan kesehatan yang unggul kepada setiap pasien. Dengan fasilitas modern, tim medis berpengalaman, serta komitmen tinggi terhadap mutu pelayanan, kami memastikan bahwa setiap pasien mendapatkan perawatan terbaik sesuai kebutuhan. "Menjadi rumah sakit terkemuka yang menyediakan layanan kesehatan berkualitas tinggi, berorientasi pada kepuasan pasien, dan berkontribusi positif bagi kesehatan masyarakat."</p>
+            </div>
+        </section>
+        <div class="container my-5">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <h2>Register</h2>
+                    <p>Silakan isi form di bawah ini untuk mendaftar sebagai pasien.</p>
+                </div>
+            </div>
+
+            <div class="row my-5">
+                <div class="col-md-6 offset-md-3">
+                    <h2>Form Pendaftaran Pasien</h2>
+                    <form>
+                        <div class="form-group">
+                            <label for="name">Nama Lengkap</label>
+                            <input type="text" class="form-control" id="name" placeholder="Masukkan nama lengkap" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" class="form-control" id="email" placeholder="Masukkan email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Nomor Telepon</label>
+                            <input type="text" class="form-control" id="phone" placeholder="Masukkan nomor telepon" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Kata Sandi</label>
+                            <input type="password" class="form-control" id="password" placeholder="Masukkan kata sandi" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Daftar</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="row my-5">
+                <div class="col-md-12 text-center">
+                    <h2>Profil Dokter</h2>
+                    <p>Berikut adalah informasi tentang dokter kami:</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <img src="img/dookter3.webp" alt="Dokter 1" class="img-fluid">
+                    <h5>Dr. Siti Aisyah, Sp.B.</h5>
+                    <p>Spesialis Bedah Kebidanan dan Kandungan</p>
+                    <p>Pengalaman: 10 tahun</p>
+                    <p>Umur 30</p>
+                    <p>Alamat: Kebonsari Wetan</p>
+                </div>
+                <div class="col-md-4">
+                    <img src="img/mission-img.jpg" alt="Dokter 2" class="img-fluid">
+                    <h5>Dr. Budi Santoso, Sp.A</h5>
+                    <p>Ahli Spesialis Pediatri</p>
+                    <p>Pengalaman: 8 tahun</p>
+                    <p>Umur: 35</p>
+                    <p>Alamat: Kandangserang</p>
+                </div>
+                <div class="col-md-4">
+                    <img src="img/dokter.webp" alt="Dokter 3" class="img-fluid">
+                    <h5>Dr. Rina Astuti, Sp.PD.</h5>
+                    <p>Spesialis Perawat Darurat</p>
+                    <p>Pengalaman: 5 tahun</p>
+                    <p>Umur: 27</p>
+                    <p>Alamat: Bandengan Gg VI</p>
+                </div>
+                <div class="col-md-4">
+                    <img src="img/pf3.jpg" alt="Dokter 4" class="img-fluid">
+                    <h2>Dr. Andi Wijaya</h2>
+                    <p>Spesialis Kedokteran Umum</p>
+                    <p>Pengalaman: 9 tahun</p>
+                    <p>Umur: 32</p>
+                    <p>Alamat: Batang Kandeman</p>
+                </div>
+                <div class="col-md-4">
+                    <img src="img/about-img.jpg" alt="Dokter 5" class="img-fluid">
+                    <h5>Dr. Abdul Rahman, Sp.B.</h5>
+                    <p>Kesehatan Mental dan Psikolog</p>
+                    <p>Pengalaman: 6 tahun</p>
+                    <p>Umur: 26</p>
+                    <p>Alamat: Batang Pakis Putih</p>
+                </div>
+                <div class="col-md-4">
+                    <img src="img/dokter2.webp" alt="Dokter 6" class="img-fluid">
+                    <h5>Dr. Maya Lestari, Sp.A.</h5>
+                    <p>Spesialis Rehabilitasi Medis</p>
+                    <p>Pengalaman: 8 tahun</p>
+                    <p>Umur: 29</p>
+                    <p>Alamat: Pekajangan IV Gg Bunga</p>
+                </div>
+            </div>
+        </div>
+        <!-- Block 9: Contact Us -->
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h2>Hubungi Kami</h2>
+                <p>.Hubungi kami untuk informasi lebih lanjut atau jika Anda membutuhkan bantuan dari tim kami.</p>
+                <p>Kami senang dapat membantu Anda.</p>
+                <p>Email: <a href="mailto:rs_br@yahoo.co.id">rs_br@yahoo.co.id</a></p>
+                <p>Alamat: Jl. Barito No 5 Pekalongan</p>
+                <div class="social-media">
+                    <h5>Info lebih lanjut</h5>
+                    <a href="https://www.facebook.com/maditiya.yk.1" target="_blank" class="mr-3">
+                        <img src="https://img.icons8.com/ios-filled/50/000000/facebook-new.png" alt="Facebook" style="width: 30px; height: 30px;"/>
+                    </a>
+                    <a href="https://x.com/Aditiyaqq" target="_blank" class="mr-3">
+                        <img src="https://img.icons8.com/ios-filled/50/000000/twitter.png" alt="Twitter" style="width: 30px; height: 30px;"/>
+                    </a>
+                    <a href="https://www.instagram.com/pra.nantaaaa/" target="_blank" class="mr-3">
+                        <img src="https://img.icons8.com/ios-filled/50/000000/instagram-new.png" alt="Instagram" style="width: 30px; height: 30px;"/>
+                    </a>
+                    <a href="https://wa.me/qr/LSZ5Z7HR3HE2A1" target="_blank">
+                        <img src="https://img.icons8.com/ios-filled/50/000000/whatsapp.png" alt="WhatsApp" style="width: 30px; height: 30px;"/>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <div class="container my-5">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <p>&copy; Rumah Sakit Pekalongan</p>
+                </div>
+            </div>
+        </div>
+        <!-- Back to Top Button -->
+<button id="backToTop" class="btn btn-secondary" style="display: none; position: fixed; bottom: 20px; right: 20px; z-index: 1000;">
+    <i class="bi bi-arrow-up"></i>
+  </button>
+      <script>
+        // Menampilkan tombol ketika scroll ke bawah
+        window.onscroll = function() {
+            const button = document.getElementById("backToTop");
+            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+                button.style.display = "block";
+            } else {
+                button.style.display = "none";
+            }
+        };
+    
+        // Fungsi untuk scroll ke atas
+        document.getElementById("backToTop").onclick = function() {
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        };
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </body>
+</html>

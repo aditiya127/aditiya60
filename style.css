@@ -1,0 +1,123 @@
+/* Global Styles */
+
+.body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+    background-color: #f9f9f9;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 8px auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .logo {
+    width: 100px;
+    height: 100px;
+    margin: 20px auto;
+    border-radius: 50%;
+  }
+  
+  .carousel-inner img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+  }
+  
+  .carousel-control-prev, .carousel-control-next {
+    width: 40px;
+    height: 40px;
+    background-color: #fff;
+    border-radius: 50%;
+    opacity: 0.5;
+    transition: opacity 0.3s;
+  }
+  
+  .carousel-control-prev:hover, .carousel-control-next:hover {
+    opacity: 1;
+  }
+  
+  /* Block Styles */
+  
+  .block {
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .block h2 {
+    margin-top: 0;
+    font-size: 24px;
+    font-weight: bold;
+    color: #337ab7;
+  }
+  
+  .block p {
+    font-size: 16px;
+    color: #666;
+  }
+  
+  /* Responsive Styles */
+  
+  @media (max-width: 768px) {
+    .container {
+      margin: 20px auto;
+      padding: 10px;
+    }
+    .block {
+      margin-bottom: 10px;
+      padding: 10px;
+    }
+    .carousel-inner img {
+      height: 300px;
+    }
+  }
+  /* style.css */
+
+/* Gaya untuk navbar */
+.navbar {
+  background-color: #f8f9fa; /* Warna latar belakang navbar */
+}
+
+/* Gaya untuk judul */
+h2 {
+  color: #007bff; /* Warna untuk judul */
+  margin-bottom: 20px; /* Jarak bawah */
+}
+
+/* Gaya untuk tombol */
+.btn-primary {
+  background-color: #007bff; /* Warna latar belakang tombol */
+  border-color: #007bff; /* Warna batas tombol */
+}
+
+/* Gaya untuk gambar dokter */
+.img-fluid {
+  border-radius: 10px; /* Sudut gambar dokter yang melengkung */
+}
+
+/* Gaya untuk teks paragraf */
+p {
+  color: #333; /* Warna teks paragraf */
+  line-height: 1.6; /* Jarak antar baris */
+}
+
+/* Gaya untuk form */
+.form-group label {
+  font-weight: bold; /* Membuat label lebih tebal */
+}
+
+/* Gaya untuk footer */
+footer {
+  background-color: #f8f9fa; /* Warna latar belakang footer */
+  padding: 20px 0; /* Padding atas dan bawah */
+  text-align: center; /* Teks di tengah */
+}

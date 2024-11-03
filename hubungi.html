@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rumah Sakit</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Tambahkan padding atas untuk konten agar tidak tertutup oleh navbar */
+        body {
+            padding-top: 100px; /* Sesuaikan sesuai tinggi navbar */
+            background-color: #e0f7fa; /* Warna latar belakang cerah */
+        }
+        .navbar {
+            background-color: #80deea; /* Warna biru muda untuk navbar */
+        }
+        .map-container {
+            margin-top: 30px;
+            height: 400px;
+        }
+        .chat-container {
+            margin-top: 30px;
+        }
+        .chat-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #25D366; /* WhatsApp green */
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            font-size: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+        }
+        .logo {
+            width: 100px;
+            height: 100px;
+        }
+        body {
+            padding: 20px;
+            background-color: #e0f7fa;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            padding: 10px;
+            text-align: center;
+            border: 1px solid #80deea;
+        }
+        th {
+            background-color: #80deea;
+        }
+         /* Gaya untuk tombol back to top */
+         #backToTop {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+            padding: 10px;
+            border-radius: 50%;
+            background-color: #80deea;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        #backToTop:hover {
+            background-color: #4CAF50;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light fixed-top">
+    <div class="container">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Beranda <span class="sr-only">(sekarang)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="profile.html">Profil</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="layanankami.html">Layanan Kami</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="galeri.html">Galeri</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="hubungi.html">Hubungi Kami</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<!-- Logo Rumah Sakit -->
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <img src="img/favicon.png" alt="Logo Rumah Sakit" class="logo img-fluid">
+        </div>
+    </div>
+</div>
+<!-- Google Map -->
+<div class="container map-container">
+    <h2 class="text-center">Lokasi Kami</h2>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.123456789101!2d109.671684!3d-6.880577!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7025d16433b7ab%3A0xe9c7ffc30205f3ec!2sRSU%20Budi%20Rahayu!5e0!3m2!1sid!2sid!4v1234567890123" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+</div>
+<!-- Chat Online Button -->
+<div class="container chat-container text-center">
+    <button class="chat-button" onclick="window.open('https://wa.me/081477157864', '_blank');" style="border: none; cursor: pointer;">
+        <img src="https://img.icons8.com/ios-filled/50/ffffff/whatsapp.png" alt="Chat" style="width : 30px; height: 30px;"/>
+    </button>
+</div>
+<!-- Galeri -->
+<div class="container gallery">
+    <h2 class="text-center">Galeri Rumah Sakit Pekalongan</h2>
+    <div class="row">
+        <div class="col-md-4">
+            <img src="img/gal10.jfif" alt="Galeri 1" class="img-fluid">
+        </div>
+        <div class="col-md-4">
+            <img src="img/gal9.jfif" alt="Galeri 2" class="img-fluid">
+        </div>
+        <div class="col-md-4">
+            <img src="img/gal11.jfif" alt="Galeri 3" class="img-fluid">
+        </div>
+    </div>
+    <div class="container">
+        <h2 class="text-center">Kalender Tahun 2024</h2>
+        <div id="calendar"></div>
+    </div>
+    
+    <script>
+        function generateCalendar(year) {
+            const calendar = document.getElementById("calendar");
+    
+            for (let month = 0; month < 12; month++) {
+                const firstDay = new Date(year, month).getDay();
+                const daysInMonth = new Date(year, month + 1, 0).getDate();
+    
+                // Membuat tabel untuk setiap bulan
+                let html = `<h3>${new Date(year, month).toLocaleString('default', { month: 'long' })} ${year}</h3>`;
+                html += "<table><tr>";
+                html += "<th>Sun</th><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th><th>Sat</th>";
+                html += "</tr><tr>";
+    
+                // Menambahkan sel kosong untuk hari sebelum hari pertama bulan
+                for (let i = 0; i < firstDay; i++) {
+                    html += "<td></td>";
+                }
+    
+                // Menambahkan hari dalam bulan
+                for (let day = 1; day <= daysInMonth; day++) {
+                    html += `<td>${day}</td>`;
+                    if ((day + firstDay) % 7 === 0) {
+                        html += "</tr><tr>";
+                    }
+                }
+    
+                // Menutup tabel
+                html += "</tr></table>";
+                calendar.innerHTML += html;
+            }
+        }
+    
+        // Memanggil fungsi untuk tahun 2024
+        generateCalendar(2024);
+    </script>
+ <!-- Block 9: Contact Us -->
+ <div class="container my-5">
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <h2>Hubungi Kami</h2>
+            <p>Hubungi kami untuk informasi lebih lanjut atau jika Anda membutuhkan bantuan dari tim kami.</p>
+            <p>Kami senang dapat membantu Anda.</p>
+            <p>Email: <a href="mailto:rs_br@yahoo.co.id">rs_br@yahoo.co.id</a></p>
+            <p>Alamat: Jl. Barito No 5 Pekalongan</p>
+            <div class="social-media">
+                <h5>Info lebih lanjut</h5>
+                <a href="https://www.facebook.com/maditiya.yk.1" target="_blank" class="mr-3">
+                    <img src="https://img.icons8.com/ios-filled/50/000000/facebook-new.png" alt="Facebook" style="width: 30px; height: 30px;"/>
+                </a>
+                <a href="https://x.com/Aditiyaqq" target="_blank" class="mr-3">
+                    <img src="https://img.icons8.com/ios-filled/50/000000/twitter.png" alt="Twitter" style="width: 30px; height: 30px;"/>
+                </a>
+                <a href="https://www.instagram.com/pra.nantaaaa/" target="_blank" class="mr-3">
+                    <img src="https://img.icons8.com/ios-filled/50/000000/instagram-new.png" alt="Instagram" style="width: 30px; height: 30px;"/>
+                </a>
+                <a href="https://wa.me/qr/LSZ5Z7HR3HE2A1" target="_blank">
+                    <img src="https://img.icons8.com/ios-filled/50/000000/whatsapp.png" alt="WhatsApp" style="width: 30px; height: 30px;"/>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <p>&copy; Rumah Sakit Pekalongan</p>
+            </div>
+        </div>
+    </div>
+    <!-- Back to Top Button -->
+<button id="backToTop" class="btn btn-secondary" style="display: none; position: fixed; bottom: 20px; right: 20px; z-index: 1000;">
+    <i class="bi bi-arrow-up"></i>
+  </button>
+      <script>
+        // Menampilkan tombol ketika scroll ke bawah
+        window.onscroll = function() {
+            const button = document.getElementById("backToTop");
+            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+                button.style.display = "block";
+            } else {
+                button.style.display = "none";
+            }
+        };
+    
+        // Fungsi untuk scroll ke atas
+        document.getElementById("backToTop").onclick = function() {
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        };
+    </script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+</html>

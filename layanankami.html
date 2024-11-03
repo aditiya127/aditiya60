@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rumah Sakit</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Tambahkan padding atas untuk konten agar tidak tertutup oleh navbar */
+        body {
+            padding-top: 100px; /* Sesuaikan sesuai tinggi navbar */
+            background-color: #e0f7fa; /* Warna latar belakang cerah */
+            font-family: Arial, sans-serif;
+        }
+
+        /* Gaya untuk navbar */
+        .navbar {
+            background-color: #80deea; /* Warna biru muda untuk navbar */
+            padding: 1rem;
+        }
+
+        .navbar .nav-link {
+            color: #fff;
+        }
+
+        .navbar .nav-link:hover {
+            color: #ccc;
+        }
+
+        .logo {
+            width: 100px;
+            height: 100px;
+            margin: 20px auto;
+        }
+
+        .table-responsive {
+            overflow-x: auto;
+        }
+
+        .table-responsive table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        .table-responsive th, .table-responsive td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+
+        .table-responsive th {
+            background-color: #f0f0f0;
+        }
+
+        .social-media {
+            margin-top: 20px;
+        }
+
+        .social-media a {
+            margin-right: 10px;
+        }
+
+        .social-media img {
+            width: 30px;
+            height: 30px;
+        }
+
+        .footer {
+            background-color: #f0f0f0;
+            padding: 10px;
+            text-align: center;
+        }
+         /* Gaya untuk tombol back to top */
+         #backToTop {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+            padding: 10px;
+            border-radius: 50%;
+            background-color: #80deea;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        #backToTop:hover {
+            background-color: #4CAF50;
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">Beranda <span class="sr-only">(sekarang)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="profile.html">Profil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="layanankami.html">Layanan Kami</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="galeri.html">Galeri</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="hubungi.html">Hubungi Kami</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Logo Rumah Sakit -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <img src="img/favicon.png" alt="Logo Rumah Sakit" class="logo">
+            </div>
+        </div>
+    </div>
+    
+    <div class="container my-5">
+        <h2 class="text-center">Layanan Kami</h2>
+        <p class="text-center">Kami menawarkan berbagai layanan kesehatan untuk memenuhi kebutuhan Anda.</p>
+
+        <!-- Carousel Video -->
+        <div id="videoCarousel" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#videoCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#videoCarousel" data-slide-to="1"></li>
+                <li data-target="#videoCarousel" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <video class="d-block w-100" controls>
+                        <source src="vids/klip2.mp4" type="video/mp4">
+                        Browser Anda tidak mendukung video.
+                    </video>
+                </div>
+                <div class="carousel-item">
+                    <video class="d-block w-100" controls>
+                        <source src="vids/klip.mp4" type="video/mp4">
+                        Browser Anda tidak mendukung video.
+                    </video>
+                </div>
+                <div class="carousel-item">
+                    <video class="d-block w-100" controls>
+                        <source src="vids/klip3.mp4" type="video/mp4">
+                        Browser Anda tidak mendukung video.
+                    </video>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#videoCarousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Sebelumnya</span>
+            </a>
+            <a class="carousel-control-next" href="#videoCarousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Selanjutnya</span>
+            </a>
+        </div>
+
+        <!-- Table for General Medicine -->
+        <div class="table-responsive my-4">
+            <table class="table table-bordered table-striped">
+                <thead class="thead-light">
+                    <tr>
+                        <th>Kedokteran Umum</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="img/blog-sidebar1.jpg" alt="Kedokteran Umum" class="img-fluid">
+                            <p>Kedokteran Umum adalah cabang ilmu kedokteran yang berfokus pada pemeriksaan, diagnosis, pengobatan, dan pencegahan berbagai jenis penyakit pada pasien dari semua rentang usia. Dokter umum atau dokter keluarga adalah profesional medis yang bertanggung jawab dalam menangani masalah kesehatan yang tidak memerlukan spesialisasi tertentu. Tugas mereka mencakup memberikan perawatan primer, melakukan skrining kesehatan, dan mengelola kondisi medis yang umum terjadi, seperti infeksi, gangguan pernapasan, masalah pencernaan, hipertensi, diabetes, dan lainnya</p>
+                            <p>Ruang Lingkup Kedokteran Umum:</p>
+                            <p>- Infeksi virus dan bakteri seperti flu, bronkitis, dan sinusitis</p>
+                            <p>- Masalah pencernaan seperti maag atau gastritis</p>
+                            <p>- Gangguan pernapasan seperti asma dan pneumonia</p>
+                            <p>- Penyakit kronis seperti diabetes dan hipertensi</p>
+                            <p>- Kesehatan mental, seperti stres dan gangguan kecemasan</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Table for Surgery -->
+        <div class="table-responsive my-4">
+            <table class="table table-bordered table-striped">
+                <thead class="thead-light">
+                    <tr>
+                        <th>Bedah</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="img/blog-sidebar3.jpg" alt="Bedah" class="img-fluid">
+                            <p>Bedah adalah cabang ilmu kedokteran yang melibatkan tindakan pembedahan untuk mendiagnosis, merawat, atau mengobati penyakit, cedera, atau kelainan fisik pada tubuh. Tindakan bedah dilakukan oleh seorang ahli bedah (dokter bedah), yang telah mendapatkan pelatihan khusus untuk melakukan operasi dengan aman dan efektif. Prosedur bedah dapat dilakukan untuk berbagai tujuan, seperti menghilangkan jaringan yang sakit, memperbaiki organ atau bagian tubuh yang rusak, atau melakukan rekonstruksi pada bagian tubuh tertentu.</p>
+                                <p>Jenis-Jenis Bedah</p>
+                                <p>Ada beberapa jenis bedah berdasarkan teknik, tujuan, atau organ yang ditangani. Beberapa kategori utama dalam bidang bedah meliputi:</p>
+                                 
+                                <p>Bedah Umum</p>
+                                <p>Bedah umum menangani kondisi di area perut, seperti usus buntu, hernia, kandung empedu, dan operasi usus. Ahli bedah umum juga bisa menangani kondisi darurat, termasuk trauma dan perdarahan internal.</p>
+                                <p>Bedah Ortopedi</p>
+                                <p>Bedah ini fokus pada sistem muskuloskeletal, seperti tulang, sendi, dan otot. Contoh prosedurnya termasuk penggantian sendi, perbaikan tulang patah, atau koreksi masalah tulang belakang.</p>
+                                
+                                    <p>Bedah Kardiotoraks</p>
+                                        <p>Bedah kardiotoraks mencakup operasi pada jantung, paru-paru, dan pembuluh darah besar. Contoh prosedur meliputi operasi bypass jantung dan pengangkatan tumor paru-paru.</p>
+                                
+                                            <p>Bedah Saraf</p>
+                                                <p>Ini adalah spesialisasi yang menangani sistem saraf, termasuk otak, sumsum tulang belakang, dan saraf perifer. Prosedurnya bisa berupa pengangkatan tumor otak atau operasi tulang belakang.</p>
+                                
+                                                    <p>Bedah Plastik dan Rekonstruksi</p>
+                                                        <p>Bedah plastik mencakup perbaikan atau rekonstruksi bagian tubuh yang rusak, seperti bedah luka bakar atau bedah kosmetik untuk memperbaiki penampilan.</p>
+                                
+                                <p>Bedah Obstetri dan Ginekologi</p>
+                                <p>Bedah ini berfokus pada perawatan kesehatan wanita, termasuk prosedur melahirkan (seperti operasi caesar) dan bedah ginekologi untuk masalah reproduksi.</p>
+                                
+                                <p>Bedah Pediatrik
+                                <p>Spesialisasi bedah ini menangani penyakit atau kondisi pada anak-anak, seperti operasi hernia pada bayi atau perbaikan kelainan bawaan.</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Table for Obstetrics and Gynecology -->
+        <div class="table-responsive my-4">
+            <table class="table table-bordered table-striped">
+                <thead class="thead-light">
+                    <tr>
+                        <th>Kebidanan dan Kandungan</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="img/pf1.jpg" alt="Kebidanan dan Kandungan" class="img-fluid">
+                            <p>1. Kebidanan (Obstetri)</p>
+                                <p>Kebidanan adalah bagian dari obstetri dan ginekologi yang berfokus pada perawatan ibu hamil dan bayi selama masa kehamilan, proses persalinan, dan masa nifas (postpartum). Tujuannya adalah memastikan kesehatan ibu dan bayi serta meminimalkan risiko komplikasi yang mungkin terjadi selama proses tersebut.</p>
+                                
+                                <p>Tugas Utama Kebidanan:</p>
+                                <p>Pemeriksaan Kehamilan: Melakukan pemantauan rutin terhadap ibu hamil untuk memastikan perkembangan janin yang sehat, seperti pemeriksaan USG, tes darah, dan evaluasi tumbuh kembang janin.</p>
+                                <p>Penanganan Persalinan: Membantu proses kelahiran bayi baik secara alami (pervaginam) maupun melalui operasi caesar jika diperlukan.</p>
+                                <p>Pencegahan dan Penanganan Komplikasi: Mengantisipasi dan menangani komplikasi kehamilan dan persalinan seperti preeklampsia, diabetes gestasional, dan perdarahan.</p>
+                                <p>Perawatan Pasca Persalinan (Postpartum): Memastikan ibu dan bayi dalam kondisi sehat setelah persalinan dan mendukung proses pemulihan ibu.</p>
+                        <p>2. Kandungan (Ginekologi)</p>
+                            <p>Ginekologi adalah cabang yang menangani semua aspek kesehatan reproduksi wanita di luar masa kehamilan. Ini mencakup diagnosis, pengobatan, dan pencegahan penyakit pada organ reproduksi wanita, seperti rahim, ovarium, saluran tuba, dan vagina. Ginekologi juga menangani masalah hormonal dan perawatan kesehatan reproduksi secara keseluruhan.</p>
+                            
+                            <p>Tugas Utama Ginekologi:</p>
+                            <p>Pemeriksaan Kesehatan Reproduksi: Ginekologi meliputi skrining rutin untuk kanker serviks (pap smear), infeksi, dan kondisi kesehatan lain pada organ reproduksi.</p>
+                           
+                            <p>Pengaturan Keluarga Berencana dan Kontrasepsi: Memberikan konsultasi terkait metode kontrasepsi yang tepat bagi wanita.</p>
+                        <p>Pengelolaan Masalah Hormonal: Menangani masalah terkait hormon seperti sindrom ovarium polikistik (PCOS), menopause, dan gangguan menstruasi.</p>
+                        <p> Pengobatan Penyakit Ginekologis: Mendiagnosis dan menangani kondisi seperti endometriosis, fibroid, kista ovarium, dan infeksi panggul.</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Table for Pediatrics -->
+        <div class="table-responsive my-4">
+            <table class="table table-bordered table-striped">
+                <thead class="thead-light">
+                    <tr>
+                        <th>Rehabilitasi Medis</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="img/blog-sidebar2.jpg" alt="Pediatri" class="img-fluid">
+                           
+                                <p>Rehabilitasi medis adalah program perawatan yang dirancang untuk membantu pasien pulih setelah mengalami penyakit atau cedera berat, serta memulihkan kemampuan fungsional dan kualitas hidup mereka. Program ini melibatkan berbagai disiplin, termasuk terapi fisik, terapi okupasi, dan terapi bicara, dengan pendekatan yang bertujuan membantu pasien mencapai kemandirian semaksimal mungkin.</p>
+                                
+                                <p>Tugas Utama Rehabilitasi Medis:</p>
+                                <p>Pemulihan Fisik dan Fungsi: Membantu pasien mengembalikan kekuatan otot, mobilitas, dan fungsi tubuh, terutama setelah operasi, stroke, atau cedera parah.</p>
+                                <p>Adaptasi Kehidupan Harian: Mengajarkan pasien cara melakukan kegiatan sehari-hari secara mandiri, terutama jika mereka mengalami kehilangan kemampuan fisik atau mental.</p>
+                                <p>Terapi Bicara dan Kognitif: Terapi ini membantu pasien yang mengalami gangguan bicara atau kognitif akibat trauma atau kondisi medis tertentu.</p>
+                                <p>Pendampingan Psikososial: Membantu pasien dan keluarga mengatasi tantangan emosional yang mungkin muncul akibat kondisi medis atau kecacatan.</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Table for Emergency Care -->
+        <div class="table-responsive my-4">
+            <table class="table table-bordered table-striped">
+                <thead class="thead-light">
+                    <tr>
+                        <th>Pediatri</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="img/pf3.jpg" alt="Perawatan Darurat" class="img-fluid">
+                            
+                                <p>Pediatri adalah cabang ilmu kedokteran yang berfokus pada kesehatan anak-anak, mulai dari bayi baru lahir hingga remaja. Dokter spesialis anak atau pediatris bertugas dalam diagnosis, pengobatan, dan pencegahan penyakit pada anak-anak serta memantau tumbuh kembang mereka agar sehat secara fisik dan mental.</p>
+
+                                
+                                <p>Tugas Utama Pediatri:</p>
+                                <p>Pemantauan Tumbuh Kembang: Melakukan pemeriksaan berkala untuk memastikan anak tumbuh sesuai dengan tahap perkembangan fisik dan kognitif yang normal.</p>
+                                <p>Vaksinasi: Memberikan imunisasi untuk melindungi anak-anak dari penyakit menular.</p>
+                                <p>Diagnosis dan Pengobatan Penyakit: Mendiagnosis dan mengobati kondisi medis umum pada anak, seperti infeksi pernapasan, gangguan pencernaan, alergi, dan kondisi kronis seperti asma atau diabetes pada anak.</p>
+                                <p>Pencegahan dan Edukasi Kesehatan: Membantu orang tua memahami pola asuh sehat, nutrisi, serta pola hidup yang mendukung kesehatan jangka panjang anak.</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Table for Rehabilitation -->
+        <div class="table-responsive my-4">
+            <table class="table table-bordered table-striped">
+                <thead class="thead-light">
+                    <tr>
+                        <th>Perawatan Darurat</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="img/pf2.jpg" alt="Rehabilitasi Medis" class="img-fluid">
+                            
+                                <p>Perawatan darurat adalah layanan medis yang diberikan segera untuk menangani kondisi yang mengancam jiwa atau memerlukan penanganan cepat, seperti cedera berat, serangan jantung, stroke, dan kondisi medis mendesak lainnya. Unit gawat darurat (UGD) di rumah sakit menyediakan layanan ini selama 24 jam sehari dengan dokter, perawat, dan staf khusus yang terlatih dalam menangani keadaan darurat.</p>
+                                
+                            <p>Tugas Utama Perawatan Darurat:</p>
+                               <p>Resusitasi dan Stabilisasi: Langkah pertama adalah menjaga jalan napas, menghentikan perdarahan, dan menstabilkan kondisi vital pasien.</p>
+                                <p>Diagnosis Cepat: Melakukan pemeriksaan fisik, pemindaian (seperti X-ray atau CT scan), dan tes laboratorium darurat untuk mengetahui kondisi pasien secara cepat.</p>
+                            <p>Pengobatan dan Tindakan Darurat: Mengambil tindakan yang diperlukan, seperti pemberian obat, penjahitan luka, atau bahkan operasi darurat.</p>
+                                <p>Rujukan atau Pemindahan: Jika kondisi pasien perlu penanganan khusus, petugas UGD akan merujuk atau memindahkan pasien ke unit atau rumah sakit yang memiliki fasilitas yang lebih memadai.</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Table for Mental Health -->
+        <div class="table-responsive my-4">
+            <table class="table table-bordered table-striped">
+                <thead class="thead-light">
+                    <tr>
+                        <th>Layanan Kesehatan Mental</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="img/pf4.jpg" alt="Layanan Kesehatan Mental" class="img-fluid">
+                            <p>Layanan kesehatan mental adalah rangkaian perawatan dan dukungan yang ditujukan untuk membantu individu yang mengalami masalah mental atau emosional, seperti kecemasan, depresi, gangguan bipolar, skizofrenia, dan berbagai gangguan kesehatan mental lainnya. Tujuan utama layanan ini adalah untuk meningkatkan kualitas hidup individu, membantu mereka mencapai kesejahteraan emosional, serta memberikan dukungan untuk pemulihan dan penyesuaian diri dalam kehidupan sehari-hari.</p>
+
+                                <p>Jenis Layanan Kesehatan Mental</p>
+                                <p>Konseling dan Terapi Psikologis: Ini melibatkan sesi-sesi dengan psikolog atau konselor yang bertujuan untuk membantu pasien memahami dan mengelola perasaan, pikiran, dan perilaku. Contoh pendekatan terapi meliputi terapi perilaku kognitif (CBT), terapi interpersonal, dan terapi keluarga.</p>
+                                
+                                <p>Psikiatri dan Pengobatan Medis: Layanan ini mencakup perawatan dari psikiater, yang dapat meresepkan obat untuk mengelola gejala yang lebih berat seperti depresi berat, gangguan bipolar, atau skizofrenia. Psikiater juga memantau perkembangan pasien dan menyesuaikan perawatan sesuai kebutuhan.</p>
+                                
+                                <p>Program Pemulihan dan Rehabilitasi: Bagi pasien yang mengalami gangguan mental berat atau yang memiliki masalah dalam menjalani kehidupan sehari-hari, program rehabilitasi menyediakan dukungan intensif untuk meningkatkan keterampilan sosial, kebiasaan hidup sehat, serta keterampilan dasar yang membantu mereka berfungsi lebih baik dalam masyarakat.</p>
+                                
+                                <p>Layanan Krisis dan Intervensi Darurat: Layanan ini membantu orang yang sedang mengalami krisis emosional atau mental yang parah, misalnya, saat menghadapi keinginan untuk melukai diri atau mengalami situasi psikotik. Layanan ini biasanya tersedia melalui hotline, unit gawat darurat, atau pusat krisis khusus.</p>
+                                
+                                <p>Dukungan Komunitas dan Kelompok: Layanan ini mencakup dukungan dari kelompok sebaya atau komunitas yang menghadapi masalah kesehatan mental serupa. Kelompok ini memberikan ruang untuk berbagi pengalaman, memberi dukungan emosional, serta memupuk solidaritas antaranggota.</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+   <!-- Block 9: Contact Us -->
+   <div class="container my-5">
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <h2>Hubungi Kami</h2>
+            <p>.Hubungi kami untuk informasi lebih lanjut atau jika Anda membutuhkan bantuan dari tim kami.</p>
+            <p>Kami senang dapat membantu Anda.</p>
+            <p>Email: <a href="mailto:rs_br@yahoo.co.id">rs_br@yahoo.co.id</a></p>
+            <p>Alamat: Jl. Barito No 5 Pekalongan</p>
+            <div class="social-media">
+                <h5>Info lebih lanjut</h5>
+                <a href="https://www.facebook.com/maditiya.yk.1" target="_blank" class="mr-3">
+                    <img src="https://img.icons8.com/ios-filled/50/000000/facebook-new.png" alt="Facebook" style="width: 30px; height: 30px;"/>
+                </a>
+                <a href="https://x.com/Aditiyaqq" target="_blank" class="mr-3">
+                    <img src="https://img.icons8.com/ios-filled/50/000000/twitter.png" alt="Twitter" style="width: 30px; height: 30px;"/>
+                </a>
+                <a href="https://www.instagram.com/pra.nantaaaa/" target="_blank" class="mr-3">
+                    <img src="https://img.icons8.com/ios-filled/50/000000/instagram-new.png" alt="Instagram" style="width: 30px; height: 30px;"/>
+                </a>
+                <a href="https://wa.me/qr/LSZ5Z7HR3HE2A1" target="_blank">
+                    <img src="https://img.icons8.com/ios-filled/50/000000/whatsapp.png" alt="WhatsApp" style="width: 30px; height: 30px;"/>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Block 10: Footer -->
+<div class="container my-5">
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <p>&copy; Rumah Sakit Pekalongan</p>
+        </div>
+    </div>
+</div>
+<!-- Back to Top Button -->
+<button id="backToTop" class="btn btn-secondary" style="display: none; position: fixed; bottom: 20px; right: 20px; z-index: 1000;">
+    <i class="bi bi-arrow-up"></i>
+  </button>
+      <script>
+        // Menampilkan tombol ketika scroll ke bawah
+        window.onscroll = function() {
+            const button = document.getElementById("backToTop");
+            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+                button.style.display = "block";
+            } else {
+                button.style.display = "none";
+            }
+        };
+    
+        // Fungsi untuk scroll ke atas
+        document.getElementById("backToTop").onclick = function() {
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        };
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+</html>
